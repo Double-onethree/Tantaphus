@@ -104,3 +104,4 @@ theme: butterfly
 deploy:
   type: git
   repo: "https://tantaphus.github.io/Tantaphus/"
+  branch: mian/root
