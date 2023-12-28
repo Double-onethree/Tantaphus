@@ -9,7 +9,7 @@
     
     <title>
         
-            平淡的香草日常 |
+            日常 |
         
         Tantaphus
     </title>
@@ -158,7 +158,7 @@
             <div class="article-content-bottom border-box">
                 
                     <div class="article-title">
-                        平淡的香草日常
+                        日常
                     </div>
                 
 
@@ -193,7 +193,7 @@
 
             <span class="meta-info-item article-update-date">
                 <i class="icon fa-solid fa-file-pen"></i>&nbsp;
-                <span class="pc" data-updated="Tue Sep 19 2023 22:53:56 GMT+0800">2023-09-19 22:53:56</span>
+                <span class="pc" data-updated="Thu Dec 28 2023 16:31:10 GMT+0800">2023-12-28 16:31:10</span>
             </span>
         
 
@@ -234,6 +234,8 @@
                     <p>一年的任天堂会员结束了，喷喷3上了S+，拿过次百倍，除了打工始终打不过。最终还是只会蓝牙。</p>
 <p>俩月时间银河帝国除了前三部后三部外都读完了。真正的科幻小说巨作，最后一部成书于50年然而其中的理念仍不过时。游离氧，这是我读完后的想法，以及读完银河帝国感觉很有必要玩一下底特律变人。机·丹尼尔太有魅力了。</p>
 <p>现在开始尝试重新MD。以及这个就是因为发现往下整博客没什么动力，先强行当成日记写写。不想躺尸，又觉着时间不够。</p>
+<hr>
+<p>阿撒托斯</p>
 
                 </div>
 
@@ -281,12 +283,55 @@
                 
 
                 
-                    
+                    if (hexo-config('comment') && hexo-config('comment.enable') == true && hexo-config('comment.use') != "") {
+  if (hexo-config('comment.use') == "valine") {
+    @import "./valine.styl"
+  }
+  else if (hexo-config('comment.use') == "gitalk") {
+    @import "./gitalk.styl"
+  }
+  else if (hexo-config('comment.use') == "twikoo") {
+    @import "./twikoo.styl"
+  }
+  else if (hexo-config('comment.use') == "waline") {
+    @import "./waline.styl"
+  }
+}
+
+.comments-container {
+  display inline-block
+  width 100%
+  margin-top $component-spacing-value
+
+  #comments-anchor {
+    width 100%
+    height 0.8rem
+  }
 
 
+  .comment-area-title {
+    width 100%
+    margin 0.8rem 0
+    color var(--text-color-3)
+    font-size 1.38rem
+
+    i {
+      color var(--text-color-3)
+    }
+
+    +keep-tablet() {
+      margin 0.4rem 0
+      font-size 1.2rem
+    }
+  }
 
 
-
+  .error-tips {
+    margin-top 1rem
+    color var(--text-color-3)
+    font-size 1rem
+  }
+}
 
                 
             </div>
